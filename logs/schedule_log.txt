@@ -1,0 +1,19 @@
+hospital scheduling simulations
+priority note: lower number means higher emergency priority
+
+fcfs simulation
+gantt: | p1 0-6 | p2 6-9 | p3 9-13 | p4 13-18 | p5 18-20 |
+average waiting time: 7.20
+average turnaround time: 11.20
+
+priority scheduling simulation
+gantt: | p1(p2) 0-6 | p2(p1) 6-9 | p5(p1) 9-11 | p4(p3) 11-16 | p3(p4) 16-20 |
+average waiting time: 6.40
+average turnaround time: 10.40
+[2026-05-08 05:17:46] queued patient=1001 name=test priority=2 care_units=3
+[2026-05-08 05:17:46] waiting on icu limit semaphore
+[2026-05-08 05:17:46] acquired icu limit semaphore
+[2026-05-08 05:17:46] admitted patient=1001 priority=2 partition=1 type=ICU waiting_time=0
+[2026-05-08 05:17:56] released icu semaphore
+[2026-05-08 05:17:56] discharged patient=1001 waiting=0.00 turnaround=10.00 avg_waiting=0.00 avg_turnaround=10.00
+[2026-05-08 05:19:04] shutdown signal received
